@@ -6,8 +6,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Login from './components/LoginPage/Login';
-import SignUp from './SignupPage/SignUp';
+import Login from './components/SignupPage/SignUp'
+import SignUp from './components/SignupPage/SignUp';
 
 function App() {
   return (
