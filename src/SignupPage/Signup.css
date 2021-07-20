@@ -1,0 +1,13 @@
+.flex-container{
+    display:grid;
+    grid-template-columns: 30% 70%;
+    justify-content: space-evenly;
+}
+.image-class2{
+    
+}
+.image-class1{
+    height: 100vh;
+    width: 70vh;
+    object-fit:contain;
+}

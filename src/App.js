@@ -1,13 +1,26 @@
 import './App.css';
-import NavBarMain from "./components/NavBar/NavBar";
 import HomePage from "./components/HomePage/HomePage";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Login from './components/LoginPage/Login';
+import SignUp from './SignupPage/SignUp';
 
 function App() {
   return (
-    <div className="App">
-        <NavBarMain/>
-        <HomePage/>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/signup">
+          <SignUp/>
+        </Route>
+        <Route path="/">
+          <HomePage/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

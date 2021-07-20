@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import "./intro.css"
 export default function Intro(){
     return(
@@ -7,11 +8,13 @@ export default function Intro(){
                 <p>
                     <text><i><b>Your free learning tool!!</b></i></text>
                     <br/><br className="br-class"/>
-                    <Button className="button-getstarted">Get Started</Button>
+                    <Link to="/signup">
+                        <Button className="button-getstarted">Get Started</Button>
+                    </Link>
                 </p>
             </div>
             <div className = "image-class">
-                <img src={require("../../svgs/ed.svg").default} className="image-class1"/>
+                <img src={require("../../svgs/ed.svg").default} className="image-class1" alt = "learning image"/>
                 
             </div>
             
