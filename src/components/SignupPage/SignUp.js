@@ -1,17 +1,21 @@
 import "./Signup.css"
-import { useRef, useEffect } from "react"
+import { useRef, useEffect , useState} from "react"
 import { Form, Button } from "react-bootstrap"
 export default function SignUp(){
-    const email = useRef(null);
-    const firstname = useRef(null);
-    const lastname = useRef(null);
-    const password = useRef(null);
-    const username = useRef(null);
-    const onSubmit = () => {
-        console.log(email.current.value);
+    const [email,setEmail] = useState("")
+    const [firstname , setFirstname] = useState("")
+    const [lastname, setLastname] = useState("")
+    const [username , setUsername] = useState("")
+    const [password , setPassword] = useState("")
+    
+    const onSubmit = (e) => {
+        e.preventDefalut();
+        if(email && password && firstname && lastname && username){
+            
+        };
     }
     useEffect(() => {
-        console.log("it worked")
+        
     })
     return(
         <>
@@ -22,17 +26,17 @@ export default function SignUp(){
                         <h6 style = {{fontFamily:"Lato"}}><i>A step closer to success</i></h6>
                         <hr/>
                         <Form className="signup-form-group" onSubmit = {onSubmit}>   
-                            <Form.Control type="email" size = "sm" placeholder="Email" isValid = {false} ref={email}/>
+                            <Form.Control type="email" value = {email} onChange={(e) => setEmail(e.target.value)} size = "sm" placeholder="Email" isValid = {false}  required/>
                             <div className = "controls"></div>
-                            <Form.Control ref= {username} type="text" size = "sm" placeholder="Username"/>
+                            <Form.Control value={username} onChange = {(e) => setUsername(e.target.value)} type="text" size = "sm" placeholder="Username" required/>
                             <div className = "controls"></div>
-                            <Form.Control ref = {firstname} type="text" size = "sm" placeholder = "First Name"></Form.Control>
+                            <Form.Control value = {firstname} onChange = {(e) => setFirstname(e.target.value)} type="text" size = "sm" placeholder = "First Name" required/>
                             <div className = "controls"></div>
-                            <Form.Control ref={lastname} type="text" size = "sm" placeholder = "Last Name"></Form.Control>
+                            <Form.Control value = {lastname} onChange = {(e) => setLastname(e.target.value)} type="text" size = "sm" placeholder = "Last Name" required/>
                             <div className = "controls"></div>
-                            <Form.Control ref={password} type="password" size = "sm" placeholder="Password" />
+                            <Form.Control value={password} onChange = {(e) => setPassword(e.target.value)} type="password" size = "sm" placeholder="Password" required />
                             <div className = "controls"></div>
-                            <Button variant="primary" type="submit" className="signup-button" size="sm">
+                            <Button variant="primary" type="submit" className="signup-button" size="sm" >
                                 Sign Up
                             </Button>
                         </Form>
