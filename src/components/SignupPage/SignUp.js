@@ -1,6 +1,8 @@
 import "./Signup.css"
 import { useRef, useEffect } from "react"
 import { Form, Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
+
 export default function SignUp(){
     const email = useRef(null);
     const firstname = useRef(null);
@@ -38,7 +40,7 @@ export default function SignUp(){
                         </Form>
                     </div>
                     <div className="signup-signin-option">
-                        <span>Already a member? Log In</span>
+                        <span>Already a member? <Link to='/login'>Log In</Link></span>
                     </div>
                 </div>
                 

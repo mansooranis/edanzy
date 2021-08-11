@@ -4,7 +4,7 @@ export default function Login(){
     return(
         <div>
             <h1>This is login page</h1>
-            <Link to="/">home</Link>
+            <Link to='/'>Home</Link>
         </div>
     )
 }
