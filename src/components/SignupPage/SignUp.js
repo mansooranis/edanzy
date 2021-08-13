@@ -3,6 +3,7 @@ import { useRef, useEffect } from "react"
 import { Form, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
+
 export default function SignUp(){
     const email = useRef(null);
     const firstname = useRef(null);
