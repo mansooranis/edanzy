@@ -8,11 +8,15 @@ import {
 } from "react-router-dom";
 import Login from './components/LoginPage/Login';
 import SignUp from './components/SignupPage/SignUp';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path = "/dashboard">
+          <Dashboard/>
+        </Route>
         <Route path="/signup">
           <SignUp/>
         </Route>
